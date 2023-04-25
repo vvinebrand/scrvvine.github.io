@@ -1,0 +1,74 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+	background: #475e50;
+}
+
+.menu,
+.h3,
+.h4,
+button {
+	font-weight: 900;
+}
+
+.submeu {
+	font-weight: 600;
+}
+
+.h5 {
+	font-weight: 300;
+}
+
+.menu {
+	color: azure;
+}
+
+.menu:hover,
+.menu:focus {
+	color: #121a15;
+}
+
+.skr {
+	margin-top: 20px;
+}
+
+.damn {
+	padding: 10px;
+}
+
+.br {
+	border-radius: 10px;
+	border-color: #223127;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.hrf {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.hrfpsst {
+	text-decoration: none;
+	font-weight: 600;
+	color: #000000;
+}
+
+.hrfpsst:hover {
+	color: #4f6c59;
+}
+
+.ssp {
+    margin-top: 10px;
+}
+
+.stl{
+	background-color: #af48487c;
+}
+
+.hrfnxt {
+	margin-top: 20px;
+	text-align: center;
+}

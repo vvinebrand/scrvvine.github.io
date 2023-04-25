@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Скрипт</title>
+        <!-- Подключение CSS файла bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <ul class="nav fixed-bottom justify-content-center ">
+            <li><a class="nav-link text-uppercase menu" href="#start" role="button" aria-expanded="false">Начало</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase menu" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Секретарь</a>
+                <ul class="dropdown-menu submeu">
+                    <li><a class="dropdown-item" href="#skrhref">Скрипт</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#opposhref">Возражения секретаря</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase menu" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ЛПР</a>
+                <ul class="dropdown-menu submeu">
+                    <li><a class="dropdown-item" href="#newlpr">Разговор с ЛПР</a></li>
+                    <li><a class="dropdown-item" href="#newmeet">Назначение встречи</a></li>
+                    <li><a class="dropdown-item" href="#newlk">Выдать доступ в ЛК</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#newoppos">Возражения ЛПР</a></li>
+                </ul>
+            </li>
+            <li><a class="nav-link text-uppercase menu" href="#proppos" role="button" aria-expanded="false">пр. возр.</a></li>
+            <li><a class="nav-link text-uppercase menu" href="#questions" role="button" aria-expanded="false">доп. вопросы</a></li>
+        </ul>
+        <div class="container-xxl p-5" id="start">
+            <div class="row" >
+                <div class="col">
+                    <p class="h3">Проход секретаря</p>
+                    <p class="fs-6"><br><strong>Цель 1</strong> — выйти на ЛПР по вопросам привлечения клиентов и бюджета: на любого директора/владельца/учредителя/соучредителя/ИП, чтобы соединили сейчас, т.е. человека, который самостоятельно принимает решение по ривлечению новых клиентов и сам выделяет бюджет.<br><br>*Для сетей (сеть — это от 3-х точек) возможно назначение встречи с маркетологом, управляющим сети.<br><br><strong>Цель 2</strong> — узнать имя и номер ЛПР.   </p>
+                </div>
+                <div class="col">
+                    <p class="h3">Структура разговора</p>
+                    <p class="fs-6"><strong>1.</strong> Приветствие, представление, просьба соединить.<br><strong>2.</strong> Фраза-аргумент — зачем соединять (если спросят) + Побуждение к действию.</p>
+                </div>
+            </div>
+            <div class="skr">
+                <p class="h3 text-center" id="skrhref">Скрипт</p>
+                <div class="border border-3 br">
+                    <div class="row damn">
+                        <div class="col">
+                            <p class="fs-5"><strong>Не знаем имя ЛПР</strong></p>
+                            <p class="fs-6">— Добрый день, это <em>"организация"</em>? Соедините с директором.</p>
+                        </div>
+                        <div class="col">
+                            <p class="fs-5"><strong>Знаем имя ЛПР</strong></p>
+                            <p class="fs-6">— Добрый день, это <em>"организация"</em>? Соедините с <em>"Имя Отчество"</em>.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><em>Зачем/по какому вопросу/что хотели и т.д.</em></div>
+                        <div class="col">
+                            Короткий ответ на вопрос секретаря и призыв к действию: 
+                            <hr>
+                            — Вы размещены у нас на портале Zoon, руководитель должен быть в курсе, соедините. 
+                            <hr>
+                            — По вопросу проекта Zoon, директор должен быть в курсе, соедините. 
+                            <hr>
+                            — Интернет справочник Zoon, у нас представлена информация о Вашей <em>"организации"</em>, возник срочный вопрос к директору, как его услышать? Вопрос срочный, но не займет много времени, всего пара минут. Подскажите его номер.
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><em>Аргументы для секретаря, если продолжает настаивать на объяснении причины звонка</em></div>
+                        <div class="col">
+                            <div class="row row-cols-lg-2 row-cols-sm-1">
+                                <div class="col-5 border-end border-1">
+                                    <strong>Если нет доступа в ЛК:</strong> 
+                                    <hr>
+                                    — Я звоню для того, чтобы выдать доступ к карточке вашей организации, которая размещена у нас на портале. У нас меняется политика конфиденциальности и нам нужно выдать доступ к странице, чтобы она не удалилась. Мне необходимо поговорить с <em>директором организации/имя ЛПР</em>. Соедините!
+                                </div>
+                                <div class="col">
+                                    <strong>Если есть доступ в ЛК:</strong>
+                                    <hr>
+                                    — Звоню по обслуживанию лицензии ващей компании на портале Zoon. Соедините с директором. <br><br><em>— Что за лицензия?</em><br><br>— Это зарегестрированная страница вашей компании на Zoon. Я звоню, чтобы уточнить текущие условия ее обслуживания, а также актуализировать доступ к карточке. Соедините с директором. <br><br>— Планово проводим обновление политики конфиденциальности, в связи с этим необходимо выдать обновленный доступ к нашему справочнику, чтобы директор мог и далее беплатно пользоваться нашей площадкой.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="h3 text-center" id="opposhref">Возражения секретаря</p>
+                <div class="row row-cols-auto justify-content-center text-center hrf">
+                    <div class="col"><a class="hrfpsst" href="#wthme" >можете со мной</a> </div>
+                    <div class="col"><a class="hrfpsst" href="#busy">занят</a></div>
+                    <div class="col"><a class="hrfpsst" href="#mail">на почту</a></div>
+                    <div class="col"><a class="hrfpsst" href="#number">оставьте номер</a></div>
+                    <div class="col"><a class="hrfpsst" href="#dontpost">не размещаемся</a></div>
+                    <div class="col"><a class="hrfpsst" href="#nothing">ничего не нужно</a></div>
+                </div>
+                <div class="border border-3 br">
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><strong class="text-uppercase">я передам</strong><br><br><em>очень редко бывает на месте/мне запрещено соединять/оставьте свои координаты, я предам их директору/маркетологу</em></div>
+                        <div class="col d-flex align-content-center flex-wrap">— Хорошо, я понимаю, что Вы <em>(не можете дать номер для звонка/передать трубку сейчас)</em>. Дайте его контакты в мессенджерах, я пришлю ему логин и пароль туда, так я буду уверена в том, что получить конфиденциальные сведения только он.</div>
+                    </div>
+                    <hr id="wthme">
+                    <div class="row damn" >
+                        <div class="col-3 border-end border-3 text-uppercase"><strong>можете со мной/да, слушаю</strong></div>
+                        <div class="col d-flex align-content-center flex-wrap">— Доступ к карточке во избежании конфликтных ситуаций я могу передать только директору. Подскажите, когда он будет на месте или есть ли контактный номер телефона?</div>
+                    </div>
+                    <hr id="busy">
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><strong class="text-uppercase">занят</strong><br><br><em>он всегда на премах, практикующий врач/сам мастер, не могу сказать, когда он освободится</em></div>
+                        <div class="col d-flex align-content-center flex-wrap">— Вопрос по поводу записи клиента/пациента, не хочу его отвлекать, давайте запишу его номер, напишу ему в мессенджерах или позвоню позже, чтоб не отвлекать от работы, диктуйте. <br><br>— Подскажите контактный номер телефона и сориентируйте, когда удобнее перезвонить ему, чтобы он не был занят?</div>
+                    </div>
+                    <hr id="mail">
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><strong class="text-uppercase">на почту</strong><br><br><em>пришлите коммерческое предложение/высылайте все по почте</em></div>
+                        <div class="col d-flex align-content-center flex-wrap">
+                            <div class="row row-cols-lg-2 row-cols-sm-1">
+                                <div class="col border-end border-1"><strong>Нет доступа в ЛК:</strong><br><br>— У нас сейчас меняется политика конфиденциальности и мне нужно обновить доступ к странице вашей организации, такие данные на почту не высылаются. Соедините с директором.</div>
+                                <div class="col"><strong>Есть доступ в ЛК:</strong><br><br>— Доступ в личный кабинет был предоставлен на имя вашего директора. У вашей компании уже есть действующая лицензия на обслуживание на нашем портале. Сейчас мне необходимо актуализировать доступ к карточке и обсудить с директором условия дальнейшего обслуживания, а также клиентов, которых мы вам направляем. По почте мы не обсуждаем данную информацию, так как она является конфиденциальной, соедините с директором.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr id="number">
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><strong class="text-uppercase">оставьте номер/перезвоним</strong><br><br><em>давайте ваши координаты, если нас заинтересует, я передам их директору/маркетологу</em></div>
+                        <div class="col d-flex align-content-center flex-wrap">— У нас многоканальный номер, поэтому я не могу оставить его вам для дозвона. Соедините меня с руководителем, либо уточните у него и он подтвердит вам, что в курсе данного размещения. Я подожду на линии.</div>
+                    </div>
+                    <hr id="dontpost">
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><strong class="text-uppercase">не размещаемся</strong><br><br><em>мы вообще нигде не размещаемся</em></div>
+                        <div class="col d-flex align-content-center flex-wrap">— У вас организация называется <em>"Название орагнизации"</em>. Адрес такой-то...? <em>— Все правильно.</em> А говорите не размещаетесь. Страницу разместил ваш директор. Соедините с ним, пожалуйста. <br><br> — Скорее всего карточка сформировалась из открытых источников. Сейчас мне необходимо выдать доступ к ней директору. Подскажите, как с ним можно связать или когда он будет на месте?</div>
+                    </div>
+                    <hr id="nothing">
+                    <div class="row damn">
+                        <div class="col-3 border-end border-3"><strong class="text-uppercase">ничего не нужно</strong><br><br><em>я секретарь, мне ничего не нужно. и компании тоже</em></div>
+                        <div class="col d-flex align-content-center flex-wrap">— Представьтесь, пожалуйста, чтобы я внесла информацию в систему о вашем отказе об актуализации доступа/о выдаче доступа в личный кабинет.</div>
+                    </div>
+                </div>
+                <p class="h3 text-center" id="newlpr">Разговор с ЛПР</p>
+                <div class="border border-3 br damn">
+                    <p class="fs-6">— Добрый день! Меня зовут <em>"Имя"</em>, компания ЗУН. Как могу к Вам обращаться? Подскажите, пожалуйста, Вашу должность. <em>(Если спрашивает зачем: Мне надо сделать пометку в базе)</em><br><br>— Я звоню Вам по достаточно неординарному вопросу. Знаете же нас?</p>
+                    <hr>
+                    <div class="row damn">
+                        <div class="col-2 border-end border-3"><strong>Да</strong><br><br>— Отлично.</div>
+                        <div class="col"><strong>Нет/не очень/отдаленно</strong><br><br>— ЗУН - это крупнейший рекомендательный портал в интернете, который выходит в ТОПе поисковиков по всем вопросам, связанным с Вашей деятельностью. У нас собраны все <em>"категория партнера"</em> в <em>"городе"</em> и ежедневно тысячи людей выбирают через нас услуги. Ваша организация у нас также представлена.</div>
+                    </div>
+                    <hr>
+                    <div class="row row-cols-lg-2 row-cols-sm-1 dawn">
+                        <div class="col border-end border-3"><strong>Вариант 1: </strong><em>Имя</em>, я звоню вам вот по какому поводу: информация о Вашей орагнизации представлена в нашем справочнике, мы планово подводим статистику с поисковиков Яндекс и Гугл (это наши партнеры) и выяснили, что сейчас увеличен поток (трафик) клиентов на ваши услуги по городу, и те компании (та же сфера), с кем мы уже сотрудничаем, не могут принять всех клиентов, которых мы к ним отправляем, поэтому нам нужен дополнительный партнер, на кого мы сможем перенаправить трафик. <em>Имя</em>, вы сможете принять дополнительно по одной записи в день от нас?</div>
+                        <div class="col">
+                            <strong>Вариант 2: </strong><em>Имя</em>, не будем ходить вокруг да около - дело в том, что у нас увеличилось количество людей на портале, которые выбирают для себя <em>"категория партнера"</em> по Вашей локации. И <em>до конца месяца/такого-то числа</em> мы ищем партнера, на которого сможем этот трафик направить - в среднем 20-25 целевых звонков на запись в месяц с четырех крупнейших площадок в поисковиках (Зун, Яндекс Карты, Гугл Карты, Yell) и доп. порталов. <br><br>
+                            <!-- Кнопка-триггер модального окна -->
+                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Категории/кол-во звонков
+                            </button>
+                            <!-- Модальное окно -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ориентир. кол-во звонков по категориям</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col border-end border-3"><strong>Супер узкий: 10-15 зв/мес</strong><br><br>Курсы маникюра<br><br>Язковые курсы<br><br>Сады и частные школы<br><br>Автошколы<br><br>Агенства недвижимости: от 10 зв/м<br><br>Фитнесы</div>
+                                                <div class="col"><strong>Ср. узкий: 20-25 зв/мес</strong><br><br>Стоматологии<br><br>Наркологические клиники<br><br>Узкопроф. клиники<br><br>Узкопроф. автосервисы<br><br>Сервисные центры<br><br>Рестораны: 25-30 зв/м</div>
+                                            </div>
+                                            <hr>
+                                            <p class="fs-6"><strong>Все остальные: от 40 до 50 зв/м</strong><br>Многопроф. салоны/мед. центры/автосервисы/вет. клиники/сауны</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="fs-6"><strong>Легенда для нового партнера: </strong>Я изучил Вашу страницу, по первичным критериям Вы нам подходите, поэтому Вам и звоню.</p>
+                    <p class="fs-6"><strong>Легенда для ex-партнера: </strong>Поскольку вопрос срочный и важный, в первую очередь мы позвонили вам, так как уже сотрудничали с вами.</p>
+                    <hr>
+                    <div class="row damn">
+                        <div class="col border-end border-3"><strong>Да, актуально</strong><br><br>— Отлично <br><br> <a class="hrfpsst" href="#questions">вопросы</a></div>
+                        <div class="col"><strong>Нет, не актуально</strong><br><br>— Подскажите, с чем связано, что не сможете принять клиентов?<br><br> <a class="hrfpsst" href="#proppos">возражения</a></div>
+                    </div>
+                </div>
+                <p class="h3 text-center" id="questions">Доп. вопросы на валидность</p>
+                <div class="border border-3 br damn">
+                    <p class="fs-6 ssp">— <em>Имя</em>, прежде чем я Вам расскажу подробнее о всех возможностях, позвольте задать Вам ряд вопросов, так как для направления трафика клиентов мы ищем организацию определенного типа.</p>
+                    <hr>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Мед. центры
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, поскажите, Вы являетесь коммерческим мед. учреждением или бюджетным?</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>К коммерческим</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqmed2">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Бюджетным</strong></p>
+                                            <p class="fs-6">— <em>Имя</em>, скажите, а вы готовы рассматривать коммерческие вложения в рекламу, так как наш продукт носит коммерческий характер?</p>
+                                            <div class="row">
+                                                <div class="col border-end border-3">
+                                                    <p class="fs-6 text-center"><strong>Да, готов</strong></p>
+                                                    <p class="fs-6">— Отлично</p>
+                                                    <a class="hrfpsst " href="#nextqmed2">Следующий вопрос</a>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="fs-6 text-center"><strong>Нет, не готов</strong></p>
+                                                    <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="fs-6">— <em>Ответ</em></p>
+                                    <!-- Кнопка-триггер модального окна -->
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modmed">
+                                    С кем не проводим встречи
+                                    </button>
+                                    <!-- Модальное окно -->
+                                    <div class="modal fade" id="modmed" tabindex="-1" aria-labelledby="modmedLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modmedLabel">С кем не проводим встречи</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Банки стволовых клеток<br><br>Молочные кухни<br><br>Санатории<br><br>Пансионаты<br><br>Службы скорой помощи<br><br>Оптики<br><br>Социальные службы и др.учреждения, которые не осуществляют диагностику и лечение пациентов<br><br>Лаборатории, где нет других услуг Выездная компания с разным спектром услуг подходят (2 и более услуги)
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqmed2">
+                                    <p class="fs-6">2. — <em>Имя</em>, скажите, Вы обслуживаете как физические, так и юридические лица?</p>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>Физ. лица обслуживает</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqmed3">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Только юр.лица</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqmed3">
+                                    <p class="fs-6">3. — Сколько примерно врачей работает у Вас в штате?</p>
+                                    <p class="fs-6">4. — Сколько кресел/кабинетов у Вас работает?</p>
+                                    <p class="fs-6"><em>Не проводим встречи если 1 специалист</em></p>
+                                    <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Недвижимость
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, скажите, Вы работаете как с физическими, так и с юридическими лицами?</p>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>Физ. лица обслуживает</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqned2">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Только юр.лица</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqned2">
+                                    <p class="fs-6">2. — <em>Имя</em>, скажите пожалуйста, какой спектр услуг вы оказываете: аренда, купля, продажа недвижимости?</p>
+                                    <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Ритуальные услуги
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, скажите, Вы оказываете услуги по захоронению?</p>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>Да, оказывает</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Нет, не оказывает</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Автосервисы
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, подскажите, а вы ремонтируете легковые автомобили?</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6 text-center"><strong>Да, ремонтирует</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqcar2">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Нет, не ремонтирует</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqcar2">
+                                    <p class="fs-6">2. — <em>Имя</em>, сколько машин Вы можете принимать одновременно?</p>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6 text-center"><strong>Более 3-х</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqcar3">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Менее 3-х</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>    
+                                        </div>
+                                    </div>
+                                    <hr id="nextqcar3">
+                                    <p class="fs-6">3. — <em>Имя</em>, какой спектр услуг вы оказываете? В вашем прайсе представлено более 5 услуг?</p>
+                                    <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                Вет. клиники
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, поскажите, Вы являетесь коммерческим вет. учреждением или бюджетным?</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>К коммерческим</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqvet2">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Бюджетным</strong></p>
+                                            <p class="fs-6">— <em>Имя</em>, скажите, а вы готовы рассматривать коммерческие вложения в рекламу, так как наш продукт носит коммерческий характер?</p>
+                                            <div class="row">
+                                                <div class="col border-end border-3">
+                                                    <p class="fs-6 text-center"><strong>Да, готов</strong></p>
+                                                    <p class="fs-6">— Отлично</p>
+                                                    <a class="hrfpsst " href="#nextqvet2">Следующий вопрос</a>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="fs-6 text-center"><strong>Нет, не готов</strong></p>
+                                                    <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="fs-6">— <em>Ответ</em></p>
+                                    <!-- Кнопка-триггер модального окна -->
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modvet">
+                                    С кем не проводим встречи
+                                    </button>
+                                    <!-- Модальное окно -->
+                                    <div class="modal fade" id="modvet" tabindex="-1" aria-labelledby="modvetLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modvetLabel">С кем не проводим встречи</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Гостиницы для животных<br><br>Кинологические центры<br><br>Ветеринарные аптеки<br><br>Салоны красоты для животных (грумминг центры) и прочие организации<br><br>где не лечат животных<br><br>Выездные ветеринарные службы
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqvet2">
+                                    <p class="fs-6">2. — <em>Имя</em>, cколько услуг Вы оказываете в своем кабинете? <em>если кабинет</em></p>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>ОТ 3-х</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqvet3">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Меньше 3-х</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqvet3">
+                                    <p class="fs-6">3. — Поскажите, какой спектр услуг Вы оказываете?</p>
+                                    <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                Курсы
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6 text-center"><strong>Нам нужны заведения, где есть</strong></p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6">— Курсы вождения автомобилем</p>
+                                            <p class="fs-6">— Курсы красоты , в которых 2 и более специалиста, большое заведение, в котором происходит постоянный процесс обучения группами (от 5 человек и более). если только курсы массажа, то не подходят</p>
+                                            <p class="fs-6">— Курсы иностранных языков где - несколько преподов (от 3х) или большие группы и постоянный набор (обязательно должен быть английский язык)</p>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6">— Постоянный набор (не закрытые группы)</p>
+                                            <p class="fs-6">— Курсы со смешаным форматом</p>
+                                            <p class="fs-6">— Школы танцев. Постоянный набор, 3 и более тренера или 2 и более зала</p>
+                                        </div>
+                                    </div>
+                                    <div class="hrfnxt"><a class="hrfpsst " href="#newmeet">Следующий блок</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                Салоны красоты
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Пусто</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                Рестораны
+                                </button>
+                            </h2>
+                            <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, подскажите, Вы принимаете брони от клиентов?</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>Да</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqres2">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Нет</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                    <p class="fs-6">— <em>Ответ</em></p>
+                                    <!-- Кнопка-триггер модального окна -->
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modres">
+                                    С кем не проводим встречи
+                                    </button>
+                                    <!-- Модальное окно -->
+                                    <div class="modal fade" id="modres" tabindex="-1" aria-labelledby="modresLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modresLabel">С кем не проводим встречи</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Бургерные<br><br>Суши-бары<br><br>Кофейни<br><br>Чайные<br><br>Кино-кафе<br><br>Кондитерские<br><br>Булочные<br><br>Пекарни<br><br>Кулинарные лавки<br><br>Шашлычные/пельменные/блинные<br><br>Пиццерии<br><br>Кейтеринг и еда на вынос (доставка еды подходит - ресторан!)<br><br>Столовая/закусочная
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqres2">
+                                    <p class="fs-6">2. — <em>Имя</em>, подскажите, есть ли у Вас банкетные залы? И сколько их?</p>
+                                    <p class="fs-6">3. — Есть ли у Вас летняя веранда?</p>
+                                    <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingNine">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                Детские сады
+                                </button>
+                            </h2>
+                            <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, подскажите, сколько у вас помещений для занятий детей?</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>От 2-х</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqds2">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Менее 2-х</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqds2">
+                                    <p class="fs-6">2. — <em>Имя</em>, какой спектр услуг Вы оказываете? (нам не подходит менее 2-ух направлений услуг)</p>
+                                    <p class="fs-6">3. — Как часто вы осуществляете набор в группы? (нам важно, чтобы был постоянный набор новых групп и детей)</p>
+                                    <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTen">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                                Фитнес центры
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="fs-6">1. — <em>Имя</em>, подскажите, какой спектр услуг Вы предоставляете?</p>
+                                    <p class="fs-6">2. — Есть ли у Вас тренажерный зал?</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6  text-center"><strong>Да</strong></p>
+                                            <p class="fs-6">— Отлично</p>
+                                            <a class="hrfpsst " href="#nextqfc2">Следующий вопрос</a>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6 text-center"><strong>Нет</strong></p>
+                                            <p class="fs-6">— Тогда, к сожалению, нет смысла проводить эту встречу и тратить Ваше время. Если что то изменится в дальнейшем, обязательно звоните! Всего доброго!</p>
+                                        </div>
+                                    </div>
+                                    <hr id="nextqfc2">
+                                    <p class="fs-6">3. — Сколько у вас помещений для тренировок?</p>
+                                    <p class="fs-6">4. — Какой у Вас размер помещений?</p>
+                                    <br><br>
+                                    <p class="fs-6 stl">Не подходят фитнесы при отелях - которые непосредственно ему принадлежат, спортивные клубы (футбольные, баскетбольные и прочие)</p>
+                                    <a class="hrfpsst " href="#newmeet">Следующий блок</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="h3 text-center" id="newmeet">Назначение встречи</p>
+                <div class="border border-3 br damn">
+                    <p class="fs-6">— <em>Имя</em>, как я Вам уже сказала ранее - по первичным критериям Вы нам подходите, и у нас уже есть сотни успешных кейсов <em>(категория клиента)</em>, с которыми мы сотрудничаем в таком формате.</p>
+                    <br>
+                    <p class="fs-6">— Именно поэтому я предлагаю вам провести деловую встречу с нашим специалистом, чтобы в режиме реального времени вы могли познакомиться с продуктом, задать все интересующие вопросы и подробно изучить статистику существующих партнеров.</p>
+                    <br>
+                    <p class="fs-6">— Специалист свяжется с Вами в назначенное время, вы все обсудите и примете решение насколько Вам это интересно.</p>
+                    <br>
+                    <p class="fs-6">— По таймингу это займет не так много времени, минут 30. Бронирую время?</p>
+                    <hr>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-3 border-end border-2"><a class="btn btn-outline-success" href="#agree" role="button">Согласен</a></div>
+                        <div class="col-3"><a class="btn btn-outline-danger" href="#newoppos" role="button">Не согласен</a></div>
+                    </div>
+                    <hr>
+                    <p class="fs-6">— <em>Имя</em>, и еще, так как вопрос поиска партнера срочный, позвольте спросить: в случае, если предложение Вам понравится, Вы самостоятельно принимаете все решения по бюджету и выбору рекламной компании или есть кто-то еще, с кем вам нужно посоветоваться?</p>
+                    <hr id="agree">
+                    <div class="row">
+                        <div class="col-3 border-end border-2"><strong>Я решаю</strong><br><br>— Отлично, значит мы сможем все обсудить.</div>
+                        <div class="col">
+                            <strong>Решает кто-то другой</strong><br><br>
+                            — <em>Имя</em>, нем важно, чтобы на встрече присутствовали все лица, так или иначе принимающие финансовое решение по данному вопросу, так как у них наверняка появятся уточнения, на которые правильно бдет ответить от первого лица и все решить в рамках встречи. Сможем организовать совместную встречу?<br><br>— <em>Ответ</em>
+                            <br><br>
+                            — Подсткажите, а кто у Вас дополнительно занимается вопросами выбора рекламной компании? <em>фио/должность/телефон</em>
+                            <br><br>
+                            <div class="row">
+                                <div class="col border-end border-2"><strong>Да</strong><br><br>— Отлично <br><em>дальше по скрипту</em></div>
+                                <div class="col"><strong>Нет</strong><br><br>— <em>Имя</em>, тогда подскажите, я правильно понимаю что, если Вас и нас все устраивает, то мы сможем начать сотрудничество? То есть вы сможете повлиять на решение о сотрудничестве между нашими организациями? <br><br>— <em>Ответ</em></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="h4 text-center" >Регламент встречи и назначение даты и времени</p>
+                    <br><br>
+                    <p class="fs-6">— <em>Имя</em>, в теперь давайте я сориентирую Вас по дальшим действиям</p>
+                    <br>
+                    <p class="fs-6">— Переговоры проходят онлайн, по времени это займет около 30 минут. Важно, чтобы у Вас в этот момент была возможность быть у компьютера или планшета с выходом в интернет.</p>
+                    <br>
+                    <p class="fs-6">— Менеджер скинет вам ссылку на конференцию ZOOM и в режиме онлайн покажет всю статистику, каким образом мы вам будем приводить клиентов, почему они будут выбирать именно Вас и как вы сможете это отследить. Также покажет статистику по партнерам в вашем городе, может вы кого-то знаете, с кем мы уже работаем. Ну и, конечно, ответит на все вопросы, которые возникнут в процессе разговора.</p>
+                    <br>
+                    <p class="fs-6">— Сегодня у вас будет возможность быть у компьютера или планшета?
+                    <p class="stl"><em>— Если сегодня возможности быть у компьютера нет, уточняем у клиента, когда такая возможность будет и назначаем встречу на другой день.</em></p>
+                    </p><br>
+                    <p class="fs-6">— Менеджер сможет провести переговоры в ... и в ..., на какое время бронируем? <em>Назначаем время на сегодня, если не может, то на завтра</em></p>
+                    <br>
+                    <p class="fs-6">— <em>Имя</em>, встречу за вами забронировала. Мы подготовим все необходимые материалы и менеджер свяжется с вами в назначенное время. Добавьте ее в свой календарь, пожалуйста, чтобы не забыть, а мы со своей стороны предварительно созвонимся с вами для подтверждения.</p>
+                    <br>
+                    <p class="fs-6">— И, <em>Имя</em>, подскажите ваш мобильный для связи с нашим специалистом?</p>
+                    <br>
+                </div>
+                <p class="h3 text-center" id="newlk">Доступ в ЛК</p>
+                <div class="border border-3 br damn">
+                    <p class="fs-6 ssp">— <em>Имя</em>, есть крайний вопрос, который нам осталось обсудить...</p>
+                    <br>
+                    <div class="accordion accordion-flush" id="accordionFlush">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingElev">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseElev" aria-expanded="false" aria-controls="flush-collapseElev">
+                                Нет доступа в ЛК
+                                </button>
+                            </h2>
+                            <div id="flush-collapseElev" class="accordion-collapse collapse" aria-labelledby="flush-headingElev" data-bs-parent="#accordionFlush">
+                                <div class="accordion-body">
+                                    <p class="fs-6">— Сейчас у нас обновился Личный кабинет на портале и мы хотели бы выдать вам доступ от него. Доступ в ЛК позволит вам:</p>
+                                    <ol class="list-group list-group-numbered">
+                                        <li class="list-group-item">Заполнить карточку необходимой информацией, чтобы сделать вас более конкурентными в глазах потенциальных клиентов;</li>
+                                        <li class="list-group-item">Поднять вашу карточку выше в выдаче для того, чтобы клиенты вас видели и приходили к вам;</li>
+                                        <li class="list-group-item">А также работать с отзывами и имиджем вашей организации в сети;</li>
+                                    </ol>
+                                    <br>
+                                    <p class="fs-6">— Продиктуйте, пожалуйста почту, на которую я могу отправить доступ?</p>
+                                    <a class="hrfpsst" href="#doslk">Если не хочет давать доступ</a><br><br>
+                                    <p class="fs-6">— Также мне нужно ваше полное ФИО для выдачи доступа. Контактный телефон могу указать тот же?</p>
+                                    <p class="fs-6">Для того, чтобы я мог выдать вам единый доступ на все ваши организации в рамках нашего портала, подскажите, у вас одна организация или есть еще какие то? (бывает сеть или несколько организаций у одного ЛПР, в таком случае необходимо объединить организации и выдать доступ на все точки)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwlv">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwlv" aria-expanded="false" aria-controls="flush-collapseTwlv">
+                                Есть доступ в ЛК
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwlv" class="accordion-collapse collapse" aria-labelledby="flush-headingTwlv" data-bs-parent="#accordionFlush">
+                                <div class="accordion-body">
+                                    <p class="fs-6">В данный момент я вижу, что доступ от Личного кабинета вашей организации был выдан на “имя”. Скажите, у вас есть доступ к личному кабинету или мне обновить его?</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col border-end border-3">
+                                            <p class="fs-6"><strong>Да, доступ есть</strong></p>
+                                            <p class="fs-6">Отлично. Тогда вы можете следить за актуальностью всей представленной информации по вашей организации и контролировать оставленные клиентами отзывы</p>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fs-6"><strong>Нет, нужно обновить</strong></p>
+                                            <p class="fs-6">Тогда давайте я обновлю вам доступ к ЛК, на какую почту могу выслать повторный?</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <p class="fs-6"><strong>Мне не нужен никакой доступ</strong></p>
+                                    <p class="fs-6">— <em>Имя</em>, личный кабинет позволит вам управлять всей ключевой информацией по вашей организации и контролировать работу с отзывами. <br>Это не займет у вас/ваших сотрудников много времени, и при этом позволит вам оставаться конкурентными в глазах потенциальных клиентов. <br>Подскажите, на какую почту могу выслать вам повторный доступ?</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="h4 text-center">Срок принятия решения</p>
+                    <p class="fs-6"><strong>Вариант 1</strong> — <em>Имя</em>, вопрос срочный, так как есть трафик людей, которым некуда записаться. Если вам все понравится, сможем направить на вас клиентов уже со следующей недели?</p>
+                    <p class="fs-6"><strong>Вариант 2</strong> — <em>Имя</em>, также нам важно понимание по итогу встречи, ставить за вами бронь или продолжать поиск. Если вас все устроит в нашем предложении, сможете такое решение озвучить после встречи?</p>
+                    <p class="fs-6"><strong>Вариант 3</strong> — <em>Имя</em>, мы сейчас находимся в поиске партнера, так как срочно нужно направить поток клиентов. Скажите, если Вам все понравится, мы сможем определиться с решением сегодня/ завтра?</p>
+                    <hr>
+                    <p class="h4 text-center">Резюмирование договоренности</p>
+                    <p class="fs-6">— <em>Имя</em>, давайте подведем итог, мы с Вами назначили переговоры со специалистом по распределению трафика на сегодня/завтра в ... по московскому времени.</p>
+                    <p class="fs-6">— Вы будете в этот момент у компьютера/планшета с интернетом.</p>
+                    <p class="fs-6">— Решение вы принимаете самостоятельно и сможете озвучить решение менеджеру, если оно вас заинтересует. Все верно? По времени это займет в среднем 30 минут. У вас остались ко мне какие либо вопросы?</p>
+                    <p class="fs-6">— Приятных переговоров, всего Вам доброго и до свидания!</p>
+                </div>
+                <p class="h3 text-center" id="newoppos">Возражения ЛПР</p>
+                <div class="border border-3 br damn">
+                    <p class="h4 text-center" id="doslk">На этапе выдачи доступа в ЛК</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Не интересно/не актуально</strong></div>
+                        <div class="col">Позвольте обозначить вам выгоды от выдачи этого доступа: Zoon.ru - это самый крупный рекомендательный сервис России и СНГ с аудиторией в 13 млн уникальных пользователей в месяц, и для того, чтобы ваши клиенты могли находить вас на нашем портале, а вы могли редактировать актуальную информацию по карточке, просматривать статистику и отвечать на отзывы - вам необходим доступ, и мы как раз хотим вам его выдать.</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Зачем мне это нужно вообще</strong></div>
+                        <div class="col">— ИО, давайте я вам расскажу и поясню, для чего вообще Вам нужна карточка и лк.
+                           <br><br>— В первую очередь — это конечно то, что в данный момент вы можете зайти и посмотреть-оставляли ли отзывы о вашей организации, ответить на них, по необходимости, возможно на что-то обратить особое внимание.
+                           <br><br>— Вы можете обновить данные, загрузить информацию и увидите, насколько ваша карточка поднялась в списке организации и как это повлияло на просмотры карточки и, следовательно, приток клиентов.
+                           <br><br>— У нас есть аналитика-которая позволяет вам видеть каким образом ведет себя клиент, что ему интересно-следовательно влиять на спрос и увеличение потока.
+                           <br><br>— И хочу обратить ваше внимание-что всем этим вы можете пользоваться бесплатно на постоянной основе.
+                           <br><br>— Мы рекомендуем своим клиентам заходить в лк не реже, чем раз в месяц, обновлять акции, отвечать на отзывы и просматривать статистику.
+                        </div>
+                    </div>
+                    <hr id="exlpr">
+                    <p class="h4 text-center">Возражения ex-партнера</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Сотрудничество было неэффективным</strong></div>
+                        <div class="col">— <em>Имя</em>, а когда вы работали с нами? (ответ клиента)
+                            <br><br>— Дело в том, что компания постоянно растет и развивается. Мы постоянно используем дополнительные инструменты привлечение трафика. (+ если есть возможность, приводим в пример конкурента поблизости): И на данный момент “конкурент” поблизости получает от нас в среднем 25-35 целевых звонков на запись в месяц. 
+                            <br><br>— <em>Имя</em>, позвольте я назначу вам встречу с менеджером: в рамках встречи вы обсудите все изменения и возможности, которые мы можем вам предложить в настоящий момент, оцените статистику на примере ваших ближайших конкурентов, и уже по итогу примите решение о дальнейшем сотрудничестве.</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Аккаунт менеджер ничего не делает</strong></div>
+                        <div class="col">— <em>Имя</em>, мне на самом деле очень жаль, что качество работы аккаунт-менеджера повлияло на общее впечатление о сотрудничестве с сервисом. В настоящее время, чтобы упростить ваше взаимодействие с нами, мы создали отдельную линию поддержки клиентов, куда вы всегда можете обратиться с любым вопросом.</div>
+                    </div>
+                    <hr id="proppos">
+                    <p class="h4 text-center">Прочие возражения</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Не интересно</strong></div>
+                        <div class="col">— <em>Имя</em>, а когда вы работали с нами? (ответ клиента)
+                            <br><br>— Дело в том, что компания постоянно растет и развивается. Мы постоянно используем дополнительные инструменты привлечение трафика. (+ если есть возможность, приводим в пример конкурента поблизости): И на данный момент “конкурент” поблизости получает от нас в среднем 25-35 целевых звонков на запись в месяц. 
+                            <br><br>— <em>Имя</em>, позвольте я назначу вам встречу с менеджером: в рамках встречи вы обсудите все изменения и возможности, которые мы можем вам предложить в настоящий момент, оцените статистику на примере ваших ближайших конкурентов, и уже по итогу примите решение о дальнейшем сотрудничестве.</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Нет денег/не готов на комм. основе</strong></div>
+                        <div class="col">— Мы готовы предложить вам такие условия размещения, что это будет вам максимально выгодно и вы будете получать новых клиентов уже в этом месяце, т.е. начнете получать потраченные деньги обратно. Вы можете обсудить наше предложение с менеджером и далее определитесь насколько оно вам подходит. Согласны?</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Клиенты не нужны</strong></div>
+                        <div class="col">— Вы один из немногочисленных владельцев бизнеса, кому сейчас не нужны клиенты. Это здорово, значит у вас с бизнесом все хорошо. Так или иначе многие мои клиенты также не испытывают трудностей в текущем потоке клиентуры, но используют дополнительные каналы, чтобы держать бизнес «в тонусе». Скажите, 25-30 целевых звонков на запись в месяц дополнительно вы сможете принять?
+                            <br><br>— Отлично, а есть услуги, которые загружены не на 100%?  (да) Мы можем направлять клиентов на определенные услуги, чтобы загрузить все направления. Предлагаю вам переговорить с нашим специалистом, который наглядно вам это покажет на примере партнеров в вашем городе, с кем мы уже сотрудничаем.
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>КП на почту</strong></div>
+                        <div class="col">
+                            <p class="fs-6"><strong>EX-партнеру:</strong></p>
+                            <p class="fs-6">— <em>Имя</em>, мы не работаем в формате коммерческих предложений.  Мы работаем под запрос: вот у нас увеличился трафик клиентов по по вашей локации и нам надо как можно быстрее найти там партнера. Ваша организация нам интересен, так как… (делаем комплимент клиенту). Давайте я назначу вам встречу/переговоры с менеджером, в рамках которой он сможет ответить на все интересующие Вас вопросы и показать как работает наш продукт на примере уже существующих партнеров. Для встречи нам нужно согласовать только время, давайте я проверю наличие свободных менеджеров для связи.</p>
+                            <p class="fs-6"><strong>Новому партнеру:</strong></p>
+                            <p class="fs-6">— У нас около 40 инструментов для работы. К каждому подбираем индивидуально. Вы будете читать описание всех 40-ка? Проще выделить 30 минут и вам все расскажет наш менеджер.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Переводит на др. лицо</strong></div>
+                        <div class="col">
+                            <p class="fs-6">— Кто у вас выделяет бюджет? Как будет выглядеть формат согласования - маркетолог приходит к вам и просит денег или он вам рассказывает?</p>
+                            <p class="fs-6">(пример: он к вам придет и скажет (Имя)  надо 150.000 на размещение на ЗУН – вы выделите бюджет?).</p>
+                            <br>
+                            <p class="fs-6"><strong>— Нет</strong></p>
+                            <p class="fs-6">— Поэтому общаться нужно с вами</p>
+                            <br>
+                            <p class="fs-6"><strong>— Да</strong></p>
+                            <p class="fs-6">— т.е. вы просто выделите деньги на предложение и не зададите ни одного вопроса, что за предложение и как работает? <br><em>(да - выходим на маркетолога / нет - финальное решение все равно принимать будете вы, наш менеджер сможет оперативно ответить на все ваши вопросы).</em></p>
+                            <br>
+                            <p class="fs-6"><strong>— Все равно отказывается без маркетолога</strong></p>
+                            <p class="fs-6">— Предлагаю провести совместную встречу, маркетолог посмотрит со стороны эффективности, а вы решите вопрос коммерческого плана. Наш менеджер сможет сразу ответить на ваши вопросы и вопросы маркетолога.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Звоните позже</strong></div>
+                        <div class="col">— Мы ищем партнера, когда у нас увеличивается трафик, чтобы все партнеры получали результат, если у нас в будущем еще увеличиться трафик, то мы будем подключать дополнительных партнеров, сейчас нужно 1-2 организации.</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Где взяли мой номер</strong></div>
+                        <div class="col">— <em>Имя</em>, роботизированная система производит генерацию номеров телефонов организаций, имеющих необходимый для наших клиентов перечень услуг. Номера телефона может быть получены из общедоступных источников. Я хочу обсудить с вами привлечение дополнительного потока клиентов. Вам это интересно?
+                            <br><br>— Мы регулярно проводим бесплатные мероприятия и просим участников порекомендовать кого-то из знакомых, кому может быть интересно подобное предложение. Наверное, кто-то оставил ваш номер. Вам интересно сейчас привлечение клиентов?</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Сколько стоит</strong></div>
+                        <div class="col">
+                            <p class="fs-6"><em><strong>При первом вопросе цену не говорим</strong></em></p>
+                            <p class="fs-6">— У нас цена не фиксированная, она складывается из различных инструментов, которые подбираются для всех индивидуально, к тому же помимо продвижения по разным направлениям мы решаем еще ряд других задач для бизнеса.</p>
+                            <p class="fs-6"><em><strong>При втором вопросе о цене</strong></em></p>
+                            <p class="fs-6">— <em>Имя Отчество</em>, я вам точную цену сейчас не скажу, так как она будет подбираться на встрече  индивидуально, могу сказать примерную  (! чтоб посмотреть цену заходим в ЛК именно того клиента, которому звоним и  выбираем раздел “продвижение”, далее раздел “премиум” и озвучиваем цену оттуда).</p>
+                            <p class="fs-6">— Сотрудничаем от 6 месяцев, средняя стоимость в месяц ...</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Как продвигаете</strong></div>
+                        <div class="col">— <em>Имя</em>, продвижение у нас идет по 4-м крупным каналам. Это поисковой портал ZOON , Яндекс карты, Гугл карты , слышали что-нибудь про это?...да…и крупнейший справочный сайт Елл. Когда клиент будет искать в интернете нужную ему услугу в поисковиках, данные 4 источника выходят в ТОПе, на них  переходят сотни клиентов. Данных клиентов мы направляем партнерам, это 25-30 целевых звонков на запись в первый месяц, а дальше уже больше.</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Что гарантируете? Готов платит за приведенного клиента</strong></div>
+                        <div class="col">— У нас есть гарантии по работе, которую мы проводим. Более того, мы одна из немногих компаний, которая предоставляет полную статистику вплоть до приведенного клиента. Уверена, что сотрудничество с нами заинтересует вас гораздо больше, чем работа за лид.</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Уже звонили</strong></div>
+                        <div class="col">— <em>Имя</em>, да, такое возможно. Просто дело в том, что у нас вырос трафик (вырос спрос на услуги вашей сферы), появились новые возможности, именно поэтому мы вам звоним. Вы на данный момент смогли бы принять поток новых клиентов в размере 25-30 целевых звонков на запись в этом месяце?</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Сайт продвигаю</strong></div>
+                        <div class="col">— Это хорошо что вы занимаетесь продвижением своего сайта, но мы никак не будем контактировать с ним. У нас есть своя аудитория с большим охватом и мы направляем людей со своих источников. Это рекомендательный портал ZOON, Яндекс и Гугл карты, а также крупный справочный сайт Елл</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Дорого</strong></div>
+                        <div class="col">— В бизнесе нет понятия "дорого - дешево", есть понятие "рентабельно - не рентабельно". С точки зрения рентабельности, наш продукт более чем окупаем. В среднем, сотрудничество у партнеров окупается за 3-4 месяца. Если вы сейчас сомневаетесь в эффективности, давайте назначим встречу с менеджером, он ответит на все вопросы и сориентирует по продукту.
+                            <br><br>— Вы говорите о цене, но не говорите о клиентах. Рекламная компания не бывает дорогой или дешёвой, она бывает эффективной или нет. Я вам предлагаю переговорить с нашим менеджером, чтобы вы убедились в эффективности нашего продукта
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 border-end border-3"><strong>Откуда карточка</strong></div>
+                        <div class="col">— У нас федеральный портал по всей России, у нас размещаются карточки всех организаций, данные беруться из общего доступа в интернете с сайтов и соц.сетей</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Подключение JS файла bootstrap 5 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>
